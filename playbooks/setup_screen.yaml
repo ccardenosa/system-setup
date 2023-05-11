@@ -1,0 +1,6 @@
+---
+- name: Setup screenrc
+  copy:
+    src: ../configs/screen/.screenrc
+    dest: "~/.screenrc"
+    backup: yes

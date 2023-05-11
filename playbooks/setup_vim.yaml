@@ -1,0 +1,14 @@
+---
+- name: Install Plugins for vimrc
+  git:
+    repo: https://github.com/fatih/vim-go.git
+    dest: ~/.vim/pack/plugins/start/vim-go
+    update: yes
+    single_branch: yes
+    version: master
+
+- name: Setup vimrc
+  copy:
+    src: ../configs/vim/.vimrc
+    dest: "~/.vimrc"
+    backup: yes

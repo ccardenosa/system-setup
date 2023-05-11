@@ -1,7 +1,10 @@
-set tabstop=4
+set hlsearch
+set background=dark
+set ts=2
+set sw=2
 set expandtab
 set background=dark
-set hlsearch
+syntax on
 
 " No annoying sound on errors
 set noerrorbells
@@ -15,18 +18,18 @@ set tm=500
 " Install OmniCppComplete like described on http://vim.wikia.com/wiki/C++_code_completion
 " This offers intelligent C++ completion when typing ‘.’ ‘->’ or <C-o>
 " Load standard tag files
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/gl
-set tags+=~/.vim/tags/sdl
-set tags+=~/.vim/tags/qt4
+"set tags+=~/.vim/tags/cpp
+"set tags+=~/.vim/tags/gl
+"set tags+=~/.vim/tags/sdl
+"set tags+=~/.vim/tags/qt4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
-set nowb
-set noswapfile
+"set nobackup
+"set nowb
+"set noswapfile
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
@@ -50,5 +53,4 @@ map th :tabfirst<CR>
 map tl :tablast<CR>
 map tt :tabedit<Space>
 
-map <F8> :!ctags -f  ./tags -R --c++-kinds=+p --fields=+iaS --extra=+q ./<CR>
-
+"map <F8> :!ctags -f  ./tags -R --c++-kinds=+p --fields=+iaS --extra=+q ./<CR>

@@ -1,0 +1,19 @@
+---
+- name: System setup
+  hosts: localhost
+  vars:
+
+  tasks:
+
+  - name: Setup system tools
+    tags:
+      - setup-rc-files
+    block:
+    - name: Runing {{ pbook }} tasks
+      when: "'setup-rc-files' in ansible_run_tags"
+      include_tasks: "{{ pbook }}"
+      loop:
+      - setup_vim.yaml
+      - setup_screen.yaml
+      loop_control:
+        loop_var: pbook
