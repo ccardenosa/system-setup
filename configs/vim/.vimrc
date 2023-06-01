@@ -4,6 +4,7 @@ set ts=2
 set sw=2
 set expandtab
 set background=dark
+set backspace=indent,eol,start
 syntax on
 
 " No annoying sound on errors
