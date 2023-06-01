@@ -54,6 +54,13 @@ map th :tabfirst<CR>
 map tl :tablast<CR>
 map tt :tabedit<Space>
 
+"
+" ctags optimization
+"
+set autochdir
+set tags=tags;
+nmap <F8> :!ctags --recurse=yes --exclude=.git<CR>
+"nmap <F8> :!ctags --recurse=yes --exclude=.git --exclude=BUILD --exclude=.svn --exclude=vendor/* --exclude=node_modules/* --exclude=db/* --exclude=log/*<CR>
 "map <F8> :!ctags -f  ./tags -R --c++-kinds=+p --fields=+iaS --extra=+q ./<CR>
 
 "
