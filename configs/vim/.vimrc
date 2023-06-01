@@ -54,3 +54,35 @@ map tl :tablast<CR>
 map tt :tabedit<Space>
 
 "map <F8> :!ctags -f  ./tags -R --c++-kinds=+p --fields=+iaS --extra=+q ./<CR>
+
+"
+" Plugins
+"
+"
+" vim-go plugin: [See https://linuxhandbook.com/install-vim-plugins/]
+"
+call plug#begin()
+
+"Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'davidhalter/jedi-vim'
+"Plug 'rust-lang/rust.vim'
+Plug 'fatih/vim-go'
+
+call plug#end()
+
+"
+" Python settings
+"
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+filetype plugin indent on
+nnoremap ty :!python3 %
+
